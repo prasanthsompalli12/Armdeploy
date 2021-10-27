@@ -22,6 +22,6 @@ jobs:
           inlineScript: |
            az deployment group create \
            --name StorageDeployment \
-           --resource-group SPNGroup \
+           --resource-group POC_DevOps_RG \
            --template-file storageaccount.json \
            --parameters storagename=GitHubSA07
