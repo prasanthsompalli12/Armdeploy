@@ -21,7 +21,7 @@ jobs:
         with:
           inlineScript: |
            az deployment group create \
-           --name ExampleDeployment \
-           --resource-group ExampleGroup \
-           --template-file <path-to-template> \
-           --parameters storageAccountType=Standard_GRS
+           --name StorageDeployment \
+           --resource-group SPNGroup \
+           --template-file storageaccount.json \
+           --parameters storagename=GitHubSA07
