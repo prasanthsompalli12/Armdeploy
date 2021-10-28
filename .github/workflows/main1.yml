@@ -24,4 +24,4 @@ jobs:
            --name StorageDeployment \
            --resource-group POC_DevOps_RG \
            --template-file storageaccount.json \
-           --parameters storagename=GitHubSA07
+           --parameters storagename=githubsa0749
