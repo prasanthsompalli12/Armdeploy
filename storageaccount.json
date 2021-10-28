@@ -1,40 +1,39 @@
-
 {
-    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-    "contentVersion": "1.0.0.0",
-    "parameters": {
-        "storagename": {
-            "type": "string"
-			"defaultValue": "GitHubSA07"
-        },
+	"$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"storagename": {
+			"type": "string",
+			"defaultValue": "githubsa0749"
+		},
 
-        "location": {
-            "type": "string"
-			"defaultValue": "eastus'
-        
-        },
+		"location": {
+			"type": "string",
+			"defaultValue": "eastus"
 
-        "storagesku": {
-            "type": "string",
-            "defaultValue": "Standard_LRS"
-        }
-    },
+		},
 
-    "resources": [
+		"storagesku": {
+			"type": "string",
+			"defaultValue": "Standard_LRS"
+		}
+	},
 
-    {
-        "type": "Microsoft.Storage/storageAccounts",
-        "apiVersion": "2021-04-01",
-        "name": "[parameters('storagename')]",
-        "location": "[parameters('location')]",
-        "sku": {
-            
-        "name": "[parameters('storagesku')]"
-        },
-        "kind": "StorageV2"
-    
-    }
+	"resources": [
 
-        
-    ]
+		{
+			"type": "Microsoft.Storage/storageAccounts",
+			"apiVersion": "2021-04-01",
+			"name": "[parameters('storagename')]",
+			"location": "[parameters('location')]",
+			"sku": {
+
+				"name": "[parameters('storagesku')]"
+			},
+			"kind": "StorageV2"
+
+		}
+
+
+	]
 }
